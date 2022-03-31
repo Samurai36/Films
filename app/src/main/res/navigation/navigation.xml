@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/filmFragment">
+    <fragment
+        android:id="@+id/filmFragment"
+        android:name="viktor.khlebnikov.gb.films.ui.fragment.FilmFragment"
+        android:label="Film"
+        tools:layout="@layout/fragment_film">
+        <action
+            android:id="@+id/action_movieFragment_to_detailsFragment"
+            app:destination="@id/filmDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmDetailsFragment"
+        android:name="viktor.khlebnikov.gb.films.ui.fragment.FilmDetailsFragment"
+        android:label="Film Details"
+        tools:layout="@layout/fragment_film_details">
+        <argument
+            android:name="film"
+            app:argType="viktor.khlebnikov.gb.films.model.Film" />
+    </fragment>
+</navigation>

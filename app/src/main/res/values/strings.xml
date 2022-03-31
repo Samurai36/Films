@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Films</string>
+    <string name="please_retry">Result not be loading. Please retry</string>
+    <string name="error_load_data">Error load data</string>
+    <string name="film_not_found_sorry">Film not found. Sorry</string>
+    <string name="please_try_again">Please, try again</string>
+</resources>
