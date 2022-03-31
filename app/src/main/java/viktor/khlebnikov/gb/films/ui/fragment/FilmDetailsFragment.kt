@@ -32,7 +32,7 @@ class FilmDetailsFragment : Fragment(R.layout.fragment_film_details) {
         binding.apply {
             val film = args.film
             Glide.with(this@FilmDetailsFragment)
-                .load(ApiService.IMAGE_BASE_URL)
+                .load("${ApiService.IMAGE_BASE_URL}${film.posterPath}")
                 .error(R.drawable.ic_image_empty)
                 .listener(object : RequestListener<Drawable> {
                     override fun onLoadFailed(
@@ -59,6 +59,7 @@ class FilmDetailsFragment : Fragment(R.layout.fragment_film_details) {
                     }
                 })
                 .into(imageViewMoviePoster)
+
             tvFilmDescription.text = film.overview
             tvMovieTitle.text = film.originalTitle
         }
